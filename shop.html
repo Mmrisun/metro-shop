@@ -1,20 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <title>Каталог</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Метро Шоп — Каталог</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ... здесь будет твой CSS из style.css ... */
+  </style>
 </head>
 <body>
-  <h2>Товары</h2>
-  <ul>
-    <li>Товар 1 - 100 грн <button onclick="buy()">Купить</button></li>
-    <li>Товар 2 - 200 грн <button onclick="buy()">Купить</button></li>
-  </ul>
-  <script>
-    function buy() {
-      alert('Оплата прошла успешно (эмуляция)');
-    }
-  </script>
+  <header>
+    <h1>Магазин Метро Шоп</h1>
+    <nav>
+      <a href="shop.html">Каталог</a>
+      <a href="register.html">Регистрация</a>
+      <a href="login.html">Вход</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="products">
+      <h2>Пушки</h2>
+
+      <div class="product-category">
+        <h3>Штурмовые винтовки (ШВ)</h3>
+        <div class="product-list">
+          <div class="product-card" data-quality="Высшего качества">
+            <h4>M416</h4>
+            <button class="quality-btn">Показать качество</button>
+          </div>
+          <div class="product-card" data-quality="Высшего качества">
+            <h4>SCAR-L</h4>
+            <button class="quality-btn">Показать качество</button>
+          </div>
+          <!-- остальные пушки так же, с data-quality -->
+        </div>
+      </div>
+
+      <!-- Аналогично для всех категорий пушек -->
+
+      <div class="product-category">
+        <h2>Сет брони</h2>
+        <div class="product-list">
+          <div class="product-card" data-quality="Обычный, Кобра, Стальной фронт">
+            <h4>Шлем</h4>
+            <button class="quality-btn">Показать качество</button>
+          </div>
+          <div class="product-card" data-quality="Обычный, Кобра, Стальной фронт">
+            <h4>Броня</h4>
+            <button class="quality-btn">Показать качество</button>
+          </div>
+          <div class="product-card" data-quality="—">
+            <h4>Рюкзак</h4>
+            <button class="quality-btn">Показать качество</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+<script>
+  // JS для показа качества товара
+  document.querySelectorAll('.quality-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const card = button.closest('.product-card');
+      const quality = card.getAttribute('data-quality');
+      const name = card.querySelector('h4').innerText;
+      alert(`Качество "${name}": ${quality}`);
+    });
+  });
+</script>
+
 </body>
 </html>
