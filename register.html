@@ -1,17 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <title>Регистрация</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Регистрация — Метро Шоп</title>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #f5f7fa;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h1 {
+      color: #2980b9;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
-  <h2>Регистрация</h2>
-  <form id="registerForm">
-    <input type="text" id="username" placeholder="Имя пользователя" required>
-    <input type="password" id="password" placeholder="Пароль" required>
-    <button type="submit">Зарегистрироваться</button>
-  </form>
-  <script src="script.js"></script>
+
+  <h1>Регистрация</h1>
+  <p>Зарегистрируйтесь через Google:</p>
+
+  <div id="g_id_onload"
+       data-client_id="ТВОЙ_CLIENT_ID"
+       data-context="signup"
+       data-ux_mode="popup"
+       data-callback="handleCredentialResponse"
+       data-auto_prompt="false">
+  </div>
+
+  <div class="g_id_signin" data-type="standard"></div>
+
+  <script>
+    function handleCredentialResponse(response) {
+      console.log('Google JWT Token:', response.credential);
+      alert('Регистрация успешна! Токен получен. Проверь консоль.');
+      // Здесь можно отправить token на сервер для создания пользователя
+    }
+  </script>
+
 </body>
 </html>
