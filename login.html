@@ -28,9 +28,8 @@
   <h1>Вход</h1>
   <p>Войдите через Google:</p>
 
-  <!-- Здесь кнопка Google входа -->
   <div id="g_id_onload"
-       data-client_id="ТВОЙ_CLIENT_ID"
+       data-client_id="914191274289-allrj28b2pf0vun8ltal6j2bikjqrgeb.apps.googleusercontent.com"
        data-callback="handleCredentialResponse"
        data-auto_prompt="false"
        data-ux_mode="popup">
@@ -42,7 +41,7 @@
     function handleCredentialResponse(response) {
       console.log('JWT token:', response.credential);
       alert('Вход через Google прошёл успешно!');
-      // Здесь можешь сохранить token, например:
+      // Здесь можно сохранить token, например:
       // localStorage.setItem('google_token', response.credential);
     }
   </script>
