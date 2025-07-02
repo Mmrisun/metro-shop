@@ -2,8 +2,107 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <title>Метро Шоп</title>
+  <title>Метро Шоп — Каталог</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #2980b9;
+      font-weight: 600;
+      border: 2px solid transparent;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background-color: #2980b9;
+      color: white;
+      border-color: #2980b9;
+    }
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    h2 {
+      color: #34495e;
+      border-bottom: 2px solid #2980b9;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .product-category {
+      margin-bottom: 40px;
+    }
+    .product-category h3 {
+      border-left: 5px solid #2980b9;
+      padding-left: 12px;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .product-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+      padding: 15px;
+      flex: 1 1 calc(33% - 20px);
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .product-card h4 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #2980b9;
+    }
+    .product-desc {
+      flex-grow: 1;
+      color: #555;
+      margin-bottom: 15px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    .buy-btn {
+      background-color: #2980b9;
+      border: none;
+      color: white;
+      padding: 10px;
+      font-weight: 600;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .buy-btn:hover {
+      background-color: #1f5f8b;
+    }
+    @media (max-width: 768px) {
+      .product-card {
+        flex: 1 1 calc(50% - 20px);
+      }
+    }
+    @media (max-width: 480px) {
+      .product-card {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -21,77 +120,206 @@
 
       <div class="product-category">
         <h3>Штурмовые винтовки (ШВ)</h3>
-        <ul>
-          <li>M416 (высшего качества)</li>
-          <li>SCAR-L (высшего качества)</li>
-          <li>FAMAS (высшего качества)</li>
-          <li>Honey Badger (высшего качества)</li>
-          <li>ACE32 (высшего качества)</li>
-          <li>AKM (высшего качества, Кобра, Стальной фронт)</li>
-          <li>Гроза (высшего качества, Кобра, Стальной фронт)</li>
-          <li>AUG (высшего качества, Кобра, Стальной фронт)</li>
-          <li>M762 (высшего качества, Кобра, Стальной фронт)</li>
-          <li>QBZ (высшего качества, Кобра, Стальной фронт)</li>
-          <li>G36C (высшего качества, Кобра, Стальной фронт)</li>
-        </ul>
+        <div class="product-list">
+          <div class="product-card">
+            <h4>M416</h4>
+            <p class="product-desc">Высшего качества</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+          <div class="product-card">
+            <h4>SCAR-L</h4>
+            <p class="product-desc">Высшего качества</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+          <div class="product-card">
+            <h4>FAMAS</h4>
+            <p class="product-desc">Высшего качества</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+          <div class="product-card">
+            <h4>Honey Badger</h4>
+            <p class="product-desc">Высшего качества</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+          <div class="product-card">
+            <h4>ACE32</h4>
+            <p class="product-desc">Высшего качества</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+          <div class="product-card">
+            <h4>AKM</h4>
+            <p class="product-desc">Высшего качества, Кобра, Стальной фронт</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+          <div class="product-card">
+            <h4>Гроза</h4>
+            <p class="product-desc">Высшего качества, Кобра, Стальной фронт</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+          <div class="product-card">
+            <h4>AUG</h4>
+            <p class="product-desc">Высшего качества, Кобра, Стальной фронт</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+          <div class="product-card">
+            <h4>M762</h4>
+            <p class="product-desc">Высшего качества, Кобра, Стальной фронт</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+          <div class="product-card">
+            <h4>QBZ</h4>
+            <p class="product-desc">Высшего качества, Кобра, Стальной фронт</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+          <div class="product-card">
+            <h4>G36C</h4>
+            <p class="product-desc">Высшего качества, Кобра, Стальной фронт</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+        </div>
       </div>
 
       <div class="product-category">
         <h3>Пистолеты-пулемёты (ПП)</h3>
-        <ul>
-          <li>VECTOR (высшего качества, Кобра, Стальной фронт)</li>
-          <li>UZI (высшего качества, Кобра, Стальной фронт)</li>
-          <li>JS9 (высшего качества, Кобра)</li>
-          <li>P90 (высшего качества, Кобра, Стальной фронт)</li>
-          <li>MP5K (высшего качества, Кобра, Стальной фронт)</li>
-        </ul>
+        <div class="product-list">
+          <div class="product-card">
+            <h4>VECTOR</h4>
+            <p class="product-desc">Высшего качества, Кобра, Стальной фронт</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+          <div class="product-card">
+            <h4>UZI</h4>
+            <p class="product-desc">Высшего качества, Кобра, Стальной фронт</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+          <div class="product-card">
+            <h4>JS9</h4>
+            <p class="product-desc">Высшего качества, Кобра</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+          <div class="product-card">
+            <h4>P90</h4>
+            <p class="product-desc">Высшего качества, Кобра, Стальной фронт</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+          <div class="product-card">
+            <h4>MP5K</h4>
+            <p class="product-desc">Высшего качества, Кобра, Стальной фронт</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+        </div>
       </div>
 
       <div class="product-category">
         <h3>Снайперские винтовки (СВ)</h3>
-        <ul>
-          <li>AWM (высшего качества, Кобра, Стальной фронт)</li>
-          <li>AMR (высшего качества, Кобра, Стальной фронт)</li>
-          <li>M24 (высшего качества, Кобра, Стальной фронт)</li>
-        </ul>
+        <div class="product-list">
+          <div class="product-card">
+            <h4>AWM</h4>
+            <p class="product-desc">Высшего качества, Кобра, Стальной фронт</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+          <div class="product-card">
+            <h4>AMR</h4>
+            <p class="product-desc">Высшего качества, Кобра, Стальной фронт</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+          <div class="product-card">
+            <h4>M24</h4>
+            <p class="product-desc">Высшего качества, Кобра, Стальной фронт</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+        </div>
       </div>
 
       <div class="product-category">
         <h3>МВ (пневматическое и другое оружие)</h3>
-        <ul>
-          <li>Пневматическое оружие TR-2A (Усовершенствованное)</li>
-          <li>Mk-12 (высшего качества, Кобра, Стальной фронт)</li>
-          <li>CKC (высшего качества, Кобра, Стальной фронт)</li>
-          <li>SLR (высшего качества, Кобра, Стальной фронт)</li>
-          <li>MK14 (высшего качества, Кобра, Стальной фронт)</li>
-        </ul>
+        <div class="product-list">
+          <div class="product-card">
+            <h4>Пневматическое оружие TR-2A</h4>
+            <p class="product-desc">Усовершенствованное</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+          <div class="product-card">
+            <h4>Mk-12</h4>
+            <p class="product-desc">Высшего качества, Кобра, Стальной фронт</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+          <div class="product-card">
+            <h4>CKC</h4>
+            <p class="product-desc">Высшего качества, Кобра, Стальной фронт</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+          <div class="product-card">
+            <h4>SLR</h4>
+            <p class="product-desc">Высшего качества, Кобра, Стальной фронт</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+          <div class="product-card">
+            <h4>MK14</h4>
+            <p class="product-desc">Высшего качества, Кобра, Стальной фронт</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+        </div>
       </div>
 
       <div class="product-category">
         <h3>Дробовики (ДК)</h3>
-        <ul>
-          <li>S12K (высшего качества, Кобра, Стальной фронт)</li>
-          <li>DBS (высшего качества, Кобра, Стальной фронт)</li>
-        </ul>
+        <div class="product-list">
+          <div class="product-card">
+            <h4>S12K</h4>
+            <p class="product-desc">Высшего качества, Кобра, Стальной фронт</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+          <div class="product-card">
+            <h4>DBS</h4>
+            <p class="product-desc">Высшего качества, Кобра, Стальной фронт</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+        </div>
       </div>
 
       <div class="product-category">
         <h3>Ручные пулемёты (РП)</h3>
-        <ul>
-          <li>MG3 (высшего качества, Кобра, Стальной фронт)</li>
-          <li>M249 (высшего качества, Кобра, Стальной фронт)</li>
-          <li>M134 (высшего качества)</li>
-        </ul>
+        <div class="product-list">
+          <div class="product-card">
+            <h4>MG3</h4>
+            <p class="product-desc">Высшего качества, Кобра, Стальной фронт</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+          <div class="product-card">
+            <h4>M249</h4>
+            <p class="product-desc">Высшего качества, Кобра, Стальной фронт</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+          <div class="product-card">
+            <h4>M134</h4>
+            <p class="product-desc">Высшего качества</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+        </div>
       </div>
 
       <div class="product-category">
         <h2>Сет брони</h2>
-        <ul>
-          <li>Шлем: Обычный, Кобра, Стальной фронт</li>
-          <li>Броня: Обычный, Кобра, Стальной фронт</li>
-          <li>Рюкзак</li>
-        </ul>
+        <div class="product-list">
+          <div class="product-card">
+            <h4>Шлем</h4>
+            <p class="product-desc">Обычный, Кобра, Стальной фронт</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+          <div class="product-card">
+            <h4>Броня</h4>
+            <p class="product-desc">Обычный, Кобра, Стальной фронт</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+          <div class="product-card">
+            <h4>Рюкзак</h4>
+            <p class="product-desc">—</p>
+            <button class="buy-btn">Купить</button>
+          </div>
+        </div>
       </div>
+
     </section>
   </main>
 </body>
